@@ -1,8 +1,7 @@
 import os
 """寻找必剪路径"""
-def findBijian():
-    
-    if os.exist("$USERPROFILE\AppData\Local\BcutBilibili"):
-        print("bcut")
-    else:
-        print("no")
+def findBijian(args):
+    os.environ['USERPROFILE']=R"D:\Users\Administrator"
+    path=f"{os.environ['USERPROFILE']}\AppData\Local\BcutBilibili"
+    if os.path.exists(path):
+        return path
